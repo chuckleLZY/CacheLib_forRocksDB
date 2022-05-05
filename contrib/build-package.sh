@@ -275,7 +275,8 @@ test -d cachelib || die "expected 'cachelib' directory not found in $PWD"
 
 
 # After ensuring we are in the correct directory, set the installation prefix"
-PREFIX="$PWD/opt/cachelib/"
+# PREFIX="$PWD/opt/cachelib/"
+PREFIX="/usr/local/"
 CMAKE_PARAMS="$CMAKE_PARAMS -DCMAKE_INSTALL_PREFIX=$PREFIX"
 CMAKE_PREFIX_PATH="$PREFIX/lib/cmake:$PREFIX/lib64/cmake:$PREFIX/lib:$PREFIX/lib64:$PREFIX:${CMAKE_PREFIX_PATH:-}"
 export CMAKE_PREFIX_PATH
